@@ -13,4 +13,8 @@ class Controller extends BaseController
  public function homepage () {
     return view('welcome');
 }
+
+public function  about () {
+    return view ('about');
+}
 }
