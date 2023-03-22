@@ -10,7 +10,7 @@
             <a class="nav-link active" aria-current="page" href="{{route('homepage')}}">Home</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="{{route('about')}}">About</a>
+            <a class="nav-link" href="{{route('contacts')}}">About</a>
           </li>
           <li class="nav-item">
             <a class="nav-link" href="#">Project</a>

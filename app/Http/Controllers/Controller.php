@@ -10,11 +10,4 @@ class Controller extends BaseController
 {
     use AuthorizesRequests, ValidatesRequests;
 
- public function homepage () {
-    return view('welcome');
-}
-
-public function  about () {
-    return view ('about');
-}
 }

@@ -15,4 +15,5 @@ use App\Http\Controllers\PublicController;
 */
 
 Route::get('/', [PublicController::class, 'homepage'])->name('homepage');
-Route::get('/about', [PublicController::class, 'about'])->name('about');
+Route::get('/contacts', [PublicController::class, 'contacts'])->name('contacts');
+Route::post('/contacts/submit', [PublicController::class, 'contacts_submit'])->name('contacts_submit');
