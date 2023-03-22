@@ -7,6 +7,13 @@
         </div>
     </div>
 
+    @if (session('status'))                              <!-- messaggio di riuscita invio email -->
+    <div class="alert alert-success text-center">  
+    {{ session('status') }}
+    </div>   
+@endif
+
+
     <div class="container my-5 ">
         <div class="row justify-content-center">
             <div class="col-12 col-md-8">

@@ -3,13 +3,14 @@
 namespace App\Mail;
 
 use Illuminate\Bus\Queueable;
-use Illuminate\Contracts\Queue\ShouldQueue;
 use Illuminate\Mail\Mailable;
+use Illuminate\Mail\Mailables\Address;
 use Illuminate\Mail\Mailables\Content;
-use Illuminate\Mail\Mailables\Envelope;
 use Illuminate\Queue\SerializesModels;
+use Illuminate\Mail\Mailables\Envelope;
+use Illuminate\Contracts\Queue\ShouldQueue;
 
-class ContactMaill extends Mailable
+class ContactMail extends Mailable
 {
     use Queueable, SerializesModels;
 
@@ -27,6 +28,7 @@ class ContactMaill extends Mailable
     public function envelope(): Envelope
     {
         return new Envelope(
+            from: new Address('noreply@photoBlog.it', 'Admin'),
             subject: 'Grazie per averci contattato!',
         );
     }
@@ -37,7 +39,7 @@ class ContactMaill extends Mailable
     public function content(): Content
     {
         return new Content(
-            view: 'view.name',
+            view: 'mail.contact-mail',
         );
     }
 
