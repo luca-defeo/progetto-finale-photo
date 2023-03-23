@@ -2,7 +2,7 @@
     <div class="container p-5  text-white text-center titoloHomepage ">
         <div class="row justify-content-center ">
             <div class="col-12">
-                <h1 class="display-1 titleColor">Contacts</h1>
+                <h1 class="display-2 titleColor">Contacts</h1>
             </div>
         </div>
     </div>
@@ -19,7 +19,7 @@
             <div class="col-12 col-md-8  ">
 
                 
-                <form class="p-5  coloreForm " method="POST" action="{{route('contacts_submit')}}">
+                <form class="p-5  coloreForm  " method="POST" action="{{route('contacts_submit')}}">
                     @if(session('EmailError'))                                 <!--   -->
         <div class="class alert alert-success text-center bg-warning">
         {{session('EmailError')}}
@@ -30,11 +30,11 @@
 
                     <div class="mb-3 textColor">
                         <label for="exampleInputEmail1" class="form-label ">Nome completo</label>
-                        <input type="text" name="name" class="form-control barreForm" id="name" >
+                        <input type="text" name="name" class="form-control barreForm " id="name" >
                     </div>
                     <div class="mb-3 textColor rounded-0">
                         <label for="email" class="form-label  ">Indirizzo email</label>
-                        <input type="email" name="email" class="form-control barreForm" id="exampleInputEmail1" aria-describedby="emailHelp">
+                        <input type="email" name="email" class="form-control barreForm p-0" id="exampleInputEmail1" aria-describedby="emailHelp">
                     </div>
                     <div class="mb-3 textColor rounded-0">
                         <label for="messaggio " class="form-label">Scrivi un messaggio </label>

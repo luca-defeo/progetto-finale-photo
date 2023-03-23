@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\PhotoController;
 use App\Http\Controllers\PublicController;
 
 /*
@@ -17,3 +18,7 @@ use App\Http\Controllers\PublicController;
 Route::get('/', [PublicController::class, 'homepage'])->name('homepage');
 Route::get('/contacts', [PublicController::class, 'contacts'])->name('contacts');
 Route::post('/contacts/submit', [PublicController::class, 'contacts_submit'])->name('contacts_submit');
+
+//ROUTE PHOTO
+Route::get('/Blog/Crea',[PhotoController::class,'create'])->name('create');
+Route::post('photo/album',[PhotoController::class,'album'])->name('album.photo');
